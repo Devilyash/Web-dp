@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+        /*
+            \d  -   match any digit(equal to [0-9])
+            \w  -   match any word character (a-z, A-Z, 0-9 & _)
+            \s  -   match whitespace character (eg - spaces & tabs)
+            \t  -   match a tab only
+            //
+
+        */
+            function validate() {
+                var text = document.getElementById("text1").value;
+
+                var regx = /^[7-9][0-9]{9}$/;
+                if(regx.test(text))
+                {
+                    document.getElementById("lbltext").innerHTML = "Valid";
+                    document.getElementById("lbltext").style.visibility = "visible";
+                    document.getElementById("lbltext").style.color = "green";
+                    document.getElementById("text1").style.border = " 2px solid green";
+                }
+                else
+                {
+                    document.getElementById("lbltext").innerHTML = "InValid";
+                    document.getElementById("lbltext").style.visibility = "visible";
+                    document.getElementById("lbltext").style.color = "red";
+                    document.getElementById("text1").style.border = " 2px solid red";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <input type="text" placeholder="Cellphone" id="text1">
+            <label id="lbltext" style="color: red; visibility: hidden">
+            Invalid</label><br><br>
+            <button onclick="validate()" type="button">Submit</button>
+        </form>
+    </body>
+</html>

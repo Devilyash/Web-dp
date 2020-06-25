@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .mydivs {
+                border: 2px solid red;
+                padding: 10px;
+                margin: 10px;
+            }
+            .addnewclass{
+                border-radius: 5px;
+                background-color: springgreen;
+            }
+            .addparaclass {
+                font-weight: bold;
+                color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 id="head">Jquery</h2>
+        <button id="btn1">addClass</button>
+        <button id="btn2">removeclass</button>
+        <button id="btn3">toggleclass</button>
+        <button id="btn4">css</button>
+        <div id="div1" class="mydivs">
+            <p id="p1" class="p1class" value="hello world">Hello my name is Yash</p>
+        </div>
+    </body>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function() {
+            $("#btn1").click(function() {
+                $("#div1").addClass("addnewclass addparaclass");
+            });
+            $("#btn2").click(function() {
+                $("#div1").removeClass("addnewclass addparaclass");
+            });
+            $("#btn3").click(function() {
+                $("#div1").toggleClass("addnewclass addparaclass");
+            });
+            $("#btn4").click(function() {
+                //alert($("#div1").css("font-size" , "20px"));
+                $("#div1").css("font-size" , "20px");
+            });
+        });
+    </script>
+</html>

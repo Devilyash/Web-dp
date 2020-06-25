@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Autocomplete in jquery UI</title>
+        <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.min.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+       
+       <style>
+           .mydivs {
+               border: 2px solid brown;
+               padding: 10px;
+               position: absolute;
+           }
+        </style>
+    </head>
+    <body>
+        <h3>Autocomplete widget in jquery</h3>
+        <div id="div1" class="mydivs">
+            <label><b>Enter your favorite City: </b></label>
+            <input type="text" name="" id="citytextbox">
+        </div>
+    </body>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="jqueryui/jquery-ui.js" type="text/javascript"></script>
+
+    <script>
+       //Autocomplete = when i type M in meassge box i should get suggetions based on the typed character like when we google search.
+
+        var city = ['Adoni',
+                    'Amaravati',
+                    'Anantapur',
+                    'Chandragiri',
+                    'Chittoor',
+                    'Dowlaiswaram',
+                    'Eluru',
+                    'Guntur',
+                    'Kadapa',
+                    'Kakinada',
+                    'Kurnool',
+                    'Machilipatnam',
+                    'Nagarjunakoṇḍa',
+                    'Rajahmundry',
+                    'Srikakulam',
+                    'Tirupati',
+                    'Vijayawada',
+                    'Visakhapatnam',
+                    'Vizianagaram',
+                    'Yemmiganur' 
+                ]
+
+            $("#citytextbox").autocomplete({
+                source: city
+            },
+            {
+                autoFocus: true,
+                delay: 500,
+                minLength: 2
+            });
+
+    </script>
+</html>

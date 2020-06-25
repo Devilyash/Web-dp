@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .mycube {
+                border: 2px solid brown;
+                padding: 10px;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2 id="head">Jquery</h2>
+        <button id="btn1">append</button>
+        <button id="btn2">after</button>
+        <button id="btn3">prepend</button>
+        <button id="btn4">before</button>
+        <button id="btn5">empty</button>
+        <button id="btn6">remove</button>
+        <div id="div1" class="mycube">
+            <p id="p1" class="p1class" value="hello world">Hello my name is Yash</p>
+        </div>
+    </body>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function() {
+            $("#btn1").click(function() {
+                $("#div1").append("<p>I am so cool man</p>");
+            });
+            $("#btn2").click(function() {
+                $("#div1").after("<p>I am so cool man</p>");
+            });
+            $("#btn3").click(function() {
+                $("#div1").prepend("<p>I am so cool man</p>");
+            });
+            $("#btn4").click(function() {
+                $("#div1").before("<p>I am so cool man</p>");
+            });
+            $("#btn5").click(function() {
+                $("#div1").empty(); //will remove the content inside the div1.
+            });
+            $("#btn6").click(function() {
+                $("#div1").remove(); // will completely remove the element.
+            });
+        
+        });
+    </script>
+</html>

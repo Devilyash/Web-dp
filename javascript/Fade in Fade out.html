@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+        var opacity = 0;
+        var intervalID = 0;
+        function fadeOut()
+        {
+            intervalID = setInterval(hide , 80);
+        }
+        function fadeIn()
+        {
+            intervalID = setInterval(show , 80);
+        }
+        function show()
+        {
+            var img = document.getElementById("img1");
+            opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+            if(opacity < 1)
+            {
+                opacity = opacity + 0.1;
+                img.style.opacity=opacity;
+                console.log(opacity);
+            }
+            else{
+                clearInterval(intervalID);
+            }
+        }
+        function hide()
+        {
+            var img = document.getElementById("img1");
+            opacity = Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+            if(opacity > 0)
+            {
+                opacity = opacity - 0.1;
+                img.style.opacity=opacity;
+                console.log(opacity);
+            }
+            else{
+                clearInterval(intervalID);
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <button onclick="fadeIn()" id="btnAdd">Fade In</button>
+        <br><br>
+        <img src="Dog2.png" id="img1" width="250px"/>
+        <br><br>
+        <button onclick="fadeOut()" id="btnStop">Fade Out</button>
+    </body>
+</html>

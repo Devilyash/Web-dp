@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            function setNewImage() {
+                document.getElementById("img1").src="Dog2.png";
+            }
+            function setOldImage() {
+                document.getElementById("img1").src="Dog.png";
+            }
+        </script>
+    </head>
+    <body>
+        <img onmouseover="setNewImage()" onmouseout="setOldImage()" src="Dog.png" width="300" id="img1"/>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Accordion in jquery UI</title>
+        <link rel="stylesheet" href="jqueryui/jquery-ui.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.min.css">
+        <link rel="stylesheet" href="jqueryui/jquery-ui.structure.css">
+       
+       <style>
+
+        </style>
+    </head>
+    <body>
+        <h2> Accordion in jquery</h2>
+        <div id="mydiv">
+            <h3>HTML</h3>
+            <p>
+                I Started leaning html and then i gained interest in web development.
+            </p>
+            <h3>CSS</h3>
+            <p>
+                I Started leaning css and then i gained interest in web development.
+            </p>
+            <h3>JAVASCRIPT</h3>
+            <p>
+                I Started leaning Javascript and then i learned about the libraries in jquery.
+                kbvjdksbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbkskvb ks vvj  hfdg gfdhbd lsg ga;as gg 
+                a;gk sgf 
+                'hgh hh '
+            </p>
+
+        </div>
+    </body>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="jqueryui/jquery-ui.js" type="text/javascript"></script>
+
+    <script>
+        // In accordion the 1st, 3rd, 5th means odd child element in body is treated as title of accordion
+        // wheareas even child elements are considered as contents of the respective odd child elements.
+        $("#mydiv").accordion({
+
+            collapsible: true,
+           // event: "mouseover", // opens on hover
+           animate: 500,
+           active: 1, // If you want to set deafult as 3 block to open not the 1.
+            // But now when we open other block the extra space is there because of the large content Javascript title block. So that is why we use heightStyle.
+           heightStyle: true,
+           icons: {header: "ui-icon-plus", activeHeader: "ui-icon-minus"}
+        });
+
+        /* We can modify the widgets using setter and getter method.
+                $("#btn1").click(function() {
+
+                    //Getter Method
+
+                    var height = $("messagebox").dialog("option", "height");
+                    alert(height);
+
+                    //Setter Method
+
+                    $("messagebox").dialog("option", "height", 600 );
+                    $("messagebox").dialog("option", "draggable", false);
+                    $("messagebox").dialog("option", "resizable", false);
+                    $("messagebox").dialog("option", "noOfMonths", 2);
+                });
+                */
+
+    </script>
+</html>

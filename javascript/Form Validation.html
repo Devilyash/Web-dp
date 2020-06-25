@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            function validate() {
+                var username = document.getElementById("uname");
+                var regx = /E00/;
+                var password = document.getElementById("pass");
+
+               /* if(username.value.trim() == "")
+                {
+                    //alert("No blank spaces allowed");
+                    username.style.border="2px solid red";
+                    document.getElementById("lbluser").style.visibility="visible";
+                    return false;
+                }
+                */
+                if(regx.test(username.value))
+                {
+                    if(password.value.trim() == "")
+                    {
+                        password.style.border="2px solid red";
+                        document.getElementById("lblpass").style.visibility="visible";
+                        return false;
+                    }
+                    else if(password.value.trim().length < 5)
+                    {
+                        password.style.border="2px solid red";
+                        return false;
+                    }
+                    else
+                    {
+                        return true;
+                    }
+                }
+                else
+                {
+                    username.style.border="2px solid red";
+                    document.getElementById("lbluser").style.visibility="visible";
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="onmouseover and out.html" onsubmit="return validate();">
+            <input id="uname" type="text" placeholder="username">
+            <label id="lbluser" style="color: red; visibility: hidden;">Invalid</label><br><br>
+            <input id="pass" type="password" placeholder="password">
+            <label id="lblpass" style="color: red; visibility: hidden;">Invalid</label><br><br>
+            <button type="submit" >Click Me</button>
+        </form>
+    </body>
+</html>

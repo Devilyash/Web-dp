@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script src="index.js"></script>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="contactinfo">
+                <div>
+                    <h2>Contact Info</h2>
+                    <ul class="info">
+                        <li>
+                            <span><img src="https://img.icons8.com/plasticine/48/000000/user-location.png"/></span>
+                            <span>Kota, Rajasthan<br>
+                            India</span>
+                        </li>
+                        <li>
+                            <span><img src="https://img.icons8.com/ios-filled/50/000000/download-mail.png"/></span>
+                            <span>yashgoyalg400@gmail.com</span>
+                        </li>
+                        <li>
+                            <span><img src="https://img.icons8.com/fluent/100/000000/phone.png"/></span>
+                            <span>+91-##########</span>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="sci">
+                    <li><a href="https://github.com/Devilyash?tab=repositories" target="_blank"><img src="https://img.icons8.com/fluent/48/000000/github.png"/></a></li>
+                    <li><a href="https://about.me/yash_goyal" target="_blank"><img src="https://img.icons8.com/fluent/48/000000/about.png"/></a></li>
+                    <li><a href="https://www.linkedin.com/in/yash-goyal-29689b180/" target="_blank"><img src="https://img.icons8.com/fluent/48/000000/linkedin-2.png"/></a></li>
+                    <li><a href="https://goblawg.herokuapp.com/" target="_blank"><img src="https://img.icons8.com/fluent/48/000000/blog.png"/></a></li>
+                </ul>
+            </div>
+            <div class="contactForm">
+                <h2>Send a Message</h2>
+                <form method="post" target="_blank">
+                    <div class="formBox">
+                        <div class="inputBox w50">
+                            <input id="firstname" type="text" name="" required>
+                            <span>First Name</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input id="lastname" type="text" name="" required>
+                            <span>Last Name</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input id="email" type="text" name="" required>
+                            <span>Email Address</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input id="mobile" type="text" name="" required>
+                            <span>Mobile Number</span>
+                        </div>
+                        <div class="inputBox w100">
+                            <textarea id="message" name="" required></textarea>
+                            <span>Write your message here...</span>
+                        </div>
+                        <div class="inputBox w100">
+                            <input type="submit" value="send" onclick="sendEmail()">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

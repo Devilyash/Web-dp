@@ -3,6 +3,7 @@
     <head>
       <link rel="stylesheet" type="text/css" href="style.css">  
       <script src="https://kit.fontawesome.com/1acdce02a8.js" crossorigin="anonymous"></script>
+      <script src="index.js" type="text/javascript"></script>
     </head>
     <body>
         <header id="header">
@@ -27,7 +28,13 @@
 			<h1><a href="#"><i class="fa fa-shopping-cart"></i></a></h1>
 		    </li>
                     <li>
-                        <a href="/home/devilyash/Documents/Web d projects/javascript/Better Login Page/index.html" class="nav-link">Sign In</a>
+			<div id="login">
+			<a href="/home/devilyash/Documents/Web d projects/javascript/Better Login Page/index.html" class="nav-link" onclick="return login();">Sign In</a>
+			</div>
+			<div id="welcome">
+			<p id="pwel" style="opacity: 0;">Welcome</p> <span id="loggedInUser"></span>
+			</div>
+                        
                     </li>
                 </ul>
             </nav>
